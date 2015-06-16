@@ -15,7 +15,6 @@ def caesar_cipher(word, shift)
   word.each_codepoint.map do |num|
     num = num - ascii_shift + shift
     num = (num % 26) + ascii_shift
-    num.chr
   end
   .inject('', :<<)
 end
